@@ -41,7 +41,7 @@ public class AtelierController {
     }
 
     @DeleteMapping("/ateliers/{numeroAtelier}")
-    public ResponseEntity<Void> deleteAtelier(@PathVariable Integer numeroAtelier) {
+    public ResponseEntity<Void> deleteAtelier(@PathVariable("numeroAtelier") Integer numeroAtelier) {
         try {
             atelierService.supprimerAtelier(numeroAtelier);
         } catch (AtelierIntrouvableException e) {
