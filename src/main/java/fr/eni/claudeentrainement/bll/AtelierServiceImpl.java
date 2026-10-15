@@ -36,7 +36,7 @@ public class AtelierServiceImpl implements AtelierService {
 
     @Override
     public void supprimerAtelier(Integer numeroAtelier) {
-        int result = atelierRepository.deletedById(numeroAtelier);
+        int result = atelierRepository.deleteById(numeroAtelier);
 
         if (result == 0) {
             throw new AtelierIntrouvableException("L'atelier " + numeroAtelier + " existe pas");

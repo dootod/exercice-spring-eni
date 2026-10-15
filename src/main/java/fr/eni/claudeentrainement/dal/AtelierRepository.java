@@ -9,5 +9,5 @@ public interface AtelierRepository {
 
     public void insert(Atelier atelier);
 
-    public int deletedById(Integer numero);
+    public int deleteById(Integer numero);
 }

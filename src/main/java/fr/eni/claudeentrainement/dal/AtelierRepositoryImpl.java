@@ -37,7 +37,7 @@ public class AtelierRepositoryImpl implements AtelierRepository {
     }
 
     @Override
-    public int deletedById(Integer numero) {
+    public int deleteById(Integer numero) {
         String sql = "DELETE FROM Ateliers WHERE numero = :numero";
 
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
