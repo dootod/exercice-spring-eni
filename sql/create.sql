@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS Ateliers;
+
+CREATE TABLE Ateliers(
+	numero INT CONSTRAINT PK_Ateliers PRIMARY KEY,
+	nom VARCHAR(30) NOT NULL
+)
