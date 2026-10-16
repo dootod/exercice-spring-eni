@@ -8,6 +8,7 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AtelierServiceImpl implements AtelierService {
@@ -41,5 +42,10 @@ public class AtelierServiceImpl implements AtelierService {
         if (result == 0) {
             throw new AtelierIntrouvableException("L'atelier " + numeroAtelier + " existe pas");
         }
+    }
+
+    @Override
+    public Optional<Atelier> afficherAtelier(Integer numero) {
+        return atelierRepository.findById(numero);
     }
 }
