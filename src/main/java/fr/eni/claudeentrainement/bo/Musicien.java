@@ -1,5 +1,6 @@
 package fr.eni.claudeentrainement.bo;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -7,11 +8,11 @@ public class Musicien {
     @NotNull(message = "Le numero est obligatoire")
     private int numeroMusicien;
 
-    @NotNull(message = "Le nom est obligatoire")
+    @NotBlank(message = "Le nom est obligatoire")
     @Size(max = 30, message = "La taille du nom de ne doit pas depasser les 30 char")
     private String nom;
 
-    @NotNull(message = "Le prenom est obligatoire")
+    @NotBlank(message = "Le prenom est obligatoire")
     @Size(max = 30, message = "La taille du prenom de ne doit pas depasser les 30 char")
     private String prenom;
 
