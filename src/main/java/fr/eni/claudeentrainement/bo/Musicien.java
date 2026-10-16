@@ -5,7 +5,7 @@ import jakarta.validation.constraints.Size;
 
 public class Musicien {
     @NotNull(message = "Le numero est obligatoire")
-    private int numeroJoueur;
+    private int numeroMusicien;
 
     @NotNull(message = "Le nom est obligatoire")
     @Size(max = 30, message = "La taille du nom de ne doit pas depasser les 30 char")
@@ -20,12 +20,12 @@ public class Musicien {
 
     private int numero;
 
-    public int getNumeroJoueur() {
-        return numeroJoueur;
+    public int getnumeroMusicien() {
+        return numeroMusicien;
     }
 
-    public void setNumeroJoueur(int numeroJoueur) {
-        this.numeroJoueur = numeroJoueur;
+    public void setnumeroMusicien(int numeroMusicien) {
+        this.numeroMusicien = numeroMusicien;
     }
 
     public String getNom() {
